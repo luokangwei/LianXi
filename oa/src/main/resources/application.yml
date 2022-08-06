@@ -1,0 +1,14 @@
+
+spring:
+  datasource: # 配置数据源信息
+    type: com.zaxxer.hikari.HikariDataSource # 配置数据源类型
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lianxi?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    username: root
+    password: imbatman
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.org.pojo # 配置类型别名所对应的包
+  mapper-locations: classpath*:/mapper/*Mapper.xml
